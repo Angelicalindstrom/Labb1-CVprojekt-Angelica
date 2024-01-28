@@ -154,7 +154,7 @@ body{
 }
 
 .overlay{
-    display: none; /* None so the popupwindow ist visible all time*/
+    display: none; /* None so the popupwindow isnt visible all time*/
     position: fixed;
     top: 0;
     left: 0;
@@ -174,6 +174,7 @@ body{
     position: fixed;
     top: 50%;
     left: 50%;
+    padding: auto;
     transform: translate(-50%, -50%);
     background-color: hsl(0, 0%, 94%);
     width: 200px;
@@ -205,7 +206,7 @@ body{
 }
 .close:hover{/*hover closing popupwindow1 (x) new backgroundcolor*/
     color: #000000;
-    background-color: rgb(180, 177, 172);
+    background-color: rgb(201, 91, 69);
 }
 
 /*POPUP2 Same as popupwindow 1"*/
@@ -263,7 +264,7 @@ body{
 }
 .close2:hover{ 
     color: #000000;
-    background-color: rgb(180, 177, 172);
+    background-color: rgb(201, 91, 69);
 }
 
 /*END POPUPWINDOWS*/
