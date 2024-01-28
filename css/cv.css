@@ -108,7 +108,7 @@ body{
 .top-container{
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction:column;
     align-content: center;
     text-align: center;
     justify-content: space-around;
@@ -116,6 +116,18 @@ body{
     padding-top: 10px;
     padding-bottom: 15px;
     margin: 15px;
+}
+#profile-image{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin:auto;
+}
+
+img{
+    min-width: 55%;
 }
 h1{
     display: flex;
