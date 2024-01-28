@@ -165,9 +165,6 @@ h1{
     border: 5px solid rgb(180, 177, 172)
 }
 
-#licence{
-    list-style-type: none;
-}
 .infobox{
     padding: 15px;
     box-shadow: 5px 5px 10px rgba(0,0,0, 0.5);
