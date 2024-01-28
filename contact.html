@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="se">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AngelicaCV.NET23</title>
+    <link rel="stylesheet" type="text/css" href="css/contact.css">
+    
+    <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+            <!--NAVBAR + hamburger-->
+        <nav class = "nav">
+            <input type="checkbox" id="nav-check">
+            <div class="nav-header">
+                <div class="nav-title">
+                    KONTAKT
+                </div>
+            </div>
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>      
+            <div class="nav-links">
+                <a href="home.html">Hem</a>
+                <a href="cv.html">CV</a>
+                <a href="project.html">Projekt</a>
+                <a href="about.html">Mer</a>
+                <a href="contact.html">Kontakt</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <aside id="sidecontact">
+            <h3>Starta ett samarbeta med mig!</h3>
+        </aside>
+
+        <section class="contactclass">
+
+            <section id="topcontact">
+                <h1>Kontakta mig</h1>
+            </section>
+
+           <section id="contactbox">
+                <section id="left">
+                    <section id="topleft">
+                        <h3>Skriv ett meddelande till mig</h3>
+                        <p><br>Jag svarar jag så snart jag<br></p>
+                    </section>
+                    <section id="bottomleft">
+                        <form action="submit_form" method="submit">
+                            
+                            <label for="name">Namn</label><br>
+                            <input type="text" id= "name" name="name"><br>
+        
+                            <label for="phone">Telefon</label><br>
+                            <input type="phonenumber" id="phone" name="phone"><br>
+                
+                            <label for="email">Epost</label><br>
+                            <input type="email" id= "email" name="email"><br>
+                
+                            <label for="message">Meddelande</label><br>
+                            <textarea id ="message" name="message"></textarea>
+                            <br><br>
+        
+                            <input type="submit" value="Skicka" id="button">
+                        </form>
+                    </section>
+                </section>
+
+                <section id="rightcontact">
+                    <img src="images/Profilbild2.png" alt="bild på angelica">
+                </section>
+            </section>  
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&COPY; 2024 AngelicaCV</p>
+    </footer>
+
+</body>
+</html>

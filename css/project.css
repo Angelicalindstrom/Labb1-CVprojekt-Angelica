@@ -1,0 +1,286 @@
+/*--------------------------/
+NAVBAR START
+/*-------------------------*/
+.nav {
+    height: 50px;
+    background-color: rgb(35, 37, 36);
+    position: relative;
+}
+.nav > .nav-header {
+    display: inline;
+    width: 100%;
+}
+.nav > .nav-header > .nav-title {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: hsl(0, 0%, 94%);
+    padding: 10px 10px 10px 10px;
+}
+.nav > .nav-btn {
+    display: none;
+}
+  
+.nav > .nav-links {
+    display: inline;
+    float: right;
+    font-size: 18px;
+}
+
+.nav > .nav-links > a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: hsl(0, 0%, 94%);
+}
+
+.nav > .nav-links > a:hover {
+    background-color: #00ccff;
+    text-decoration: underline;
+    color:rgb(35, 37, 36);
+}/*making the checkbox invisible in nav meny*/
+
+.nav > #nav-check {
+    display: none;
+}
+@media (max-width:600px) {
+.nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+.nav > .nav-btn > label {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    padding: 13px;
+}
+.nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: #12bee931;
+}
+.nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #00ccff;
+}
+.nav > .nav-links {
+    position:absolute;
+    display:block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.5s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+}
+.nav > .nav-links > a {
+    display: block;
+    width: 100%;
+}
+.nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+}
+.nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+}
+}
+/*--------------------------/
+NAVBAR SLUT
+/*-------------------------*/
+main{
+    margin: 5%;
+}
+
+body{
+    font-style:normal;
+    font-family: "Cutive Mono", monospace;
+    background-color: rgb(180, 177, 172);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.top{
+    min-height: 100vh;
+}
+
+#toppcontainer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    padding: 25px;
+    margin: 4px;
+    background-color: hsl(0, 0%, 94%);
+    box-shadow: 5px 5px 10px rgba(0,0,0, 0.5);
+    border: 5px solid rgb(180, 177, 172)
+}
+.middlecontainer{
+    min-width: inherit;
+    text-align: center;
+    min-height: 100vh;
+    background-color: rgb(180, 177, 172);
+
+}
+
+/* PICTURE POPUP STYLES */
+
+#popbox1{
+    text-align: center;
+    margin: 20px;
+    padding: 8px;
+    background-color: hsl(0, 0%, 94%);
+    box-shadow: 5px 5px 10px rgba(0,0,0, 0.5);
+    border: 5px solid rgb(180, 177, 172)
+}
+
+#list{
+    list-style-type: none;
+}
+
+#popbox1 > a >img:hover{/*to spec that you can click the picture*/
+    width: 150px;
+    height: 150px;
+}
+
+.overlay{
+    display: none; /* None so the popupwindow ist visible all time*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+.overlay:target{
+    display: flex; /* targeting the overlay class and making it display:flex(visible)*/
+}
+.popup {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: hsl(0, 0%, 94%);
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#popbox1set{ /*popupwindow1 button, "tryck här" set*/
+    color: #00ccff;
+    padding: 5px;
+    margin: 8px;
+    background-color: #000000;
+    box-shadow: 5px 5px 10px rgba(0,0,0, 0.5);
+    border: 5px solid rgb(180, 177, 172)
+}
+#popbox1set:hover{ /*hover popupwindow1 button*/
+    color: #000000;
+    font-size: large;
+    background-color: #00ccff;
+}
+.close { /*closing popupwindow1, button (x)*/
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    color: #000;
+    text-decoration: none;
+}
+.close:hover{/*hover closing popupwindow1 (x) new backgroundcolor*/
+    color: #000000;
+    background-color: rgb(180, 177, 172);
+}
+
+/*POPUP2 Same as popupwindow 1"*/
+
+#popbox2{
+    text-align: center;
+    margin: 20px;
+    padding: 8px;
+    background-color: hsl(0, 0%, 94%);
+    box-shadow: 5px 5px 10px rgba(0,0,0, 0.5);
+    border: 5px solid rgb(180, 177, 172)
+}
+
+#popbox2 > a >img:hover{ 
+    width: 150px;
+    height: 150px;
+}
+
+.popup2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: hsl(0, 0%, 94%);
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    border-radius: 5px;
+}
+#popbox2set{
+    color: #00ccff;
+    padding: 5px;
+    margin: 8px;
+    background-color: #000000;
+    box-shadow: 5px 5px 10px rgba(0,0,0, 0.5);
+    border: 5px solid rgb(180, 177, 172)
+}
+#popbox2set:hover{
+    color: #000000;
+    font-size: large;
+    background-color: #00ccff;
+}
+.close2 {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    color: #000000;
+    text-decoration: none;
+}
+.close2:hover{ 
+    color: #000000;
+    background-color: rgb(180, 177, 172);
+}
+
+/*END POPUPWINDOWS*/
+
+@media screen and (max-width: 768px) {
+    h2{
+        font-size: small;
+    }
+} 
+
+
+/* FOOTER STYLES */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+    background-color: rgb(35, 37, 36);
+    color: hsl(0, 0%, 94%);
+}

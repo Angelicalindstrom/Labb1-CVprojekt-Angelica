@@ -1,0 +1,194 @@
+/*--------------------------/
+NAVBAR START
+/*-------------------------*/
+.nav {
+    height: 50px;
+    background-color: rgb(35, 37, 36);
+    position: relative;
+}
+.nav > .nav-header {
+    display: inline;
+    width: 100%;
+}
+.nav > .nav-header > .nav-title {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: hsl(0, 0%, 94%);
+    padding: 10px 10px 10px 10px;
+}
+.nav > .nav-btn {
+    display: none;
+}
+  
+.nav > .nav-links {
+    display: inline;
+    float: right;
+    font-size: 18px;
+}
+
+.nav > .nav-links > a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: hsl(0, 0%, 94%);
+}
+
+.nav > .nav-links > a:hover {
+    background-color: #00ccff;
+    text-decoration: underline;
+    color:rgb(35, 37, 36);
+}/*making the checkbox invisible in nav meny*/
+
+.nav > #nav-check {
+    display: none;
+}
+@media (max-width:600px) {
+.nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+.nav > .nav-btn > label {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    padding: 13px;
+}
+.nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: #12bee931;
+}
+.nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #12bee9;
+}
+.nav > .nav-links {
+    position:absolute;
+    display:block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+}
+.nav > .nav-links > a {
+    display: block;
+    width: 100%;
+}
+.nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+}
+.nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+}
+}
+/*--------------------------/
+NAVBAR SLUT
+/*-------------------------*/
+
+body{
+    /* background-color: rgb(197, 195, 192); */
+    font-style:normal;
+    font-family: "Cutive Mono", monospace;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.about{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(197, 195, 192);
+    min-height: 100vh;
+    padding: 50px;
+}
+#info{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    min-height: inherit;
+    padding: 15px;
+    background-color: hsl(0, 0%, 94%);
+    border: 5px solid #6ee2ff;
+    box-shadow: 5px 5px 20px #00ccff;
+
+}
+
+.topinfo{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 15px;
+    padding: 10px;
+    box-shadow: 5px 5px 10px rgba(0,0,0, 0.5);
+    background-color: hsl(0, 0%, 94%);
+    border: 5px solid rgb(180, 177, 172)
+
+}
+
+.picgallery{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 500px;
+    justify-content: center;
+    padding: 20px
+
+}
+.picgallery img{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 30px #000000;
+    border: 5px solid rgb(180, 177, 172)
+}
+
+.moreinfo{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 15px;
+    padding: 10px;
+    box-shadow: 5px 5px 10px rgba(0,0,0, 0.5);
+    box-shadow: 5px 5px 10px rgba(0,0,0, 0.5);
+    background-color: hsl(0, 0%, 94%);
+    border: 5px solid rgb(180, 177, 172)
+
+}
+
+#aside{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-width: fit-content;
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 5px 5px 10px rgba(0,0,0, 0.5);
+    background-color: hsl(0, 0%, 94%);
+    border: 5px solid rgb(180, 177, 172)
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    background-color: rgb(35, 37, 36);
+    color:hsl(0, 0%, 94%);
+}
